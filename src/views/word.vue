@@ -4,9 +4,17 @@
       <el-scrollbar style="height: 100%" class="inscroll">
         <ul class="infinite-list" style="overflow:hidden">
         <el-card>
-          <div style="width: 80%">
-            
+          <div class="contcard">
+            <div class="avaterimg">
+            <el-avatar shape="square" :size="70" src="https://gitee.com/im0o/photobed/raw/master/img/20200727163358.png" />
+            </div>
+            <div class="textss">
+              本站语录大部分收录于 MCBBS论坛中 每日一水心灵鸡汤 有效语录<br>
+              原帖地址：https://www.mcbbs.net/thread-1105827-1-1.html<br>
+              如需投稿，请联系站长 0ojixueseno0 投稿前请保证使用 WTFPL 开源协议
+            </div>
           </div>
+
           </el-card><br>
           <div v-for="i in this.productinfos.word" :key="i">
             <el-card><i class="el-icon-coffee-cup" style="float: left;font-size: 23px" />{{ i }}</el-card>
@@ -73,5 +81,32 @@ import { Loading } from 'element-ui';
 }
 .el-scrollbar__wrap {
   overflow-x: hidden;
+}
+.textss {
+  display: inline-flex;
+  margin-inline-start: 10px;
+  // width: 40px
+  // margin-bottom: 20px;
+}
+.avaterimg {
+  display: inline;
+  float: left;
+  margin-bottom: 10px;
+}
+.contcard {
+  width: 80%;
+  text-align: left
+}
+
+@media only screen and (max-width: 925px) {
+    .avaterimg {
+      display: flex;
+      margin-left: calc(50% - 32px);
+      text-align: center;
+    }
+    .contcard {
+      width: 100%;
+      text-align: center
+    }
 }
 </style>
