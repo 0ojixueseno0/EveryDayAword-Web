@@ -1,24 +1,18 @@
-# everydayaword
+# EveryDayAword
 
-## Project setup
-```
-npm install
-```
+功能介绍移步：https://im0o.top/everydayaword.html
 
-### Compiles and hot-reloads for development
-```
-npm run serve
-```
+## 🚀网页部分 - 前端
 
-### Compiles and minifies for production
-```
-npm run build
-```
+使用语言：Vue(+element ui + vuex) + JavaScript + scss +html
 
-### Lints and fixes files
-```
-npm run lint
-```
+数据传输实现：
 
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+-----
+
+刷新时通过websocket向后端传值获取数据
+
+----
+
+食用方法：编译后部署到服务器，没了。
+
