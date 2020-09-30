@@ -1,27 +1,27 @@
 <template>
-<el-container id="app">
+  <el-container id="app">
     <el-header>
-        <div id="header">
-            <div style="float: left;">
-            <i class="el-icon-edit" @click="jumptomain()">每日一句心灵鸡汤</i>
-            </div>
+      <div id="header">
+        <div style="float: left;">
+          <i class="el-icon-edit" @click="jumptomain()">每日一句心灵鸡汤</i>
+        </div>
 
-    <!-- <div id="nav">
+        <!-- <div id="nav">
       <router-link to="/">Home</router-link> |
       <router-link to="/about">About</router-link> |
       <router-link to="/word">Word</router-link>
     </div> -->
-        </div>
+      </div>
     </el-header>
-  <el-main style="overflow: hidden;">
-    <router-view />
-    <!-- <Word /> -->
-    <!-- <el-scrollbar style="height: 100%" class="outscoll"> -->
-    <!-- </el-scrollbar> -->
-  </el-main>
-  <el-footer>
-    <div class="block">
-    <!-- <el-pagination
+    <el-main style="overflow: hidden;">
+      <router-view />
+      <!-- <Word /> -->
+      <!-- <el-scrollbar style="height: 100%" class="outscoll"> -->
+      <!-- </el-scrollbar> -->
+    </el-main>
+    <el-footer>
+      <div class="block">
+        <!-- <el-pagination
       @size-change="handleSizeChange"
       @current-change="handleCurrentChange"
       :current-page.sync="currentPage3"
@@ -29,22 +29,24 @@
       layout="prev, pager, next, jumper"
       :total="1000">
     </el-pagination> -->
-    <p style="display: inline">🚀Powered by </p><el-link href="https://im0o.top/" type="primary" style="display: inline">0ojixueseno0</el-link>
-  </div>
-  </el-footer>
-</el-container>
+        <p style="display: inline">🚀Powered by</p>
+        <el-link href="https://im0o.top/" type="primary" style="display: inline"
+          >0ojixueseno0</el-link
+        >
+      </div>
+    </el-footer>
+  </el-container>
 </template>
 
 <script>
 // import Word from "views/word.vue";
 export default {
-    methods: {
-      jumptomain() {
-        console.log("abababba")
-      }
-    },
-    components: {
-  }
+  methods: {
+    jumptomain() {
+      console.log("abababba");
+    }
+  },
+  components: {}
 };
 </script>
 
@@ -87,39 +89,39 @@ export default {
   // min-width: 725px;
   min-height: 100%;
 }
-.footerfont{
+.footerfont {
   font-size: 14px;
-  }
+}
 @media (max-width: 321px) {
   header {
-  font-size: 26px;
-  user-select: none;
-  width: 130vw;
-  max-height: 48px;
-  margin-top: -8px;
-  margin-left: -8px;
-  line-height: 155%;
-  box-shadow: 0 1px 4px rgba(0, 0, 0, .12), 0 0 6px rgba(0, 0, 0, .04);
-}
-.el-container {
-  min-width: 320px;
-  // min-height: 100%;
-}
+    font-size: 26px;
+    user-select: none;
+    width: 130vw;
+    max-height: 48px;
+    margin-top: -8px;
+    margin-left: -8px;
+    line-height: 155%;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.12), 0 0 6px rgba(0, 0, 0, 0.04);
+  }
+  .el-container {
+    min-width: 320px;
+    // min-height: 100%;
+  }
 }
 @media (min-width: 321px) {
-header {
-  font-size: 30px;
-  user-select: none;
-  width: 100vw;
-  max-height: 48px;
-  margin-top: -8px;
-  margin-left: -8px;
-  line-height: 155%;
-  box-shadow: 0 1px 4px rgba(0, 0, 0, .12), 0 0 6px rgba(0, 0, 0, .04);
-}
-.el-container {
-  min-width: 720px;
-  // min-height: 100%;
-}
+  header {
+    font-size: 30px;
+    user-select: none;
+    width: 100vw;
+    max-height: 48px;
+    margin-top: -8px;
+    margin-left: -8px;
+    line-height: 155%;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.12), 0 0 6px rgba(0, 0, 0, 0.04);
+  }
+  .el-container {
+    min-width: 720px;
+    // min-height: 100%;
+  }
 }
 </style>
