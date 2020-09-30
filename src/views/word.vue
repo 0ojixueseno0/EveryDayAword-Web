@@ -42,7 +42,7 @@ import { Loading } from 'element-ui';
         initWebpack(){//初始化websocket
           // Loading.service({text: "正在努力熬煮鸡汤..."});
           this.loadingInstance = Loading.service({text: "正在努力熬煮鸡汤..."});
-          const wsuri = "ws://localhost:8887";
+          const wsuri = "ws://abc.im0o.top:14771/";
           this.websock = new WebSocket(wsuri);//这里面的this都指向vue
           this.websock.onopen = this.websocketopen;
           this.websock.onmessage = this.websocketonmessage;
@@ -54,9 +54,9 @@ import { Loading } from 'element-ui';
           this.websock.send("getword")
         },
         websocketonmessage(e){ //数据接收
-          console.log(e)
+          // console.log(e)
           this.productinfos = JSON.parse(e.data);
-          console.log(this.productinfos.word)
+          // console.log(this.productinfos.word)
           this.$nextTick(() => { // 以服务的方式调用的 Loading 需要异步关闭
             this.loadingInstance.close();
           });
