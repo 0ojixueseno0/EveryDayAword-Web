@@ -24,13 +24,16 @@ jobs:
       uses: actions/setup-node@v1
       with:
         node-version: ${{ matrix.node-version }}
-    - name: Build and Deploy
+        run: |
+          npm install
+          npm run build
+    - name: Deploy
       uses: JamesIves/github-pages-deploy-action@master
-      env:
-        ACCESS_TOKEN: ${{ secrets.TOKEN }}
+      with:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+#         ACCESS_TOKEN: ${{ secrets.TOKEN }}
         BRANCH: master
         FOLDER: dist
-        BUILD_SCRIPT: npm install && npm run build
         CLEAN: true # Automatically remove deleted files from the deploy branch
         REPOSITORY_NAME: 0ojixueseno0/EveryDayAword-Site
 
