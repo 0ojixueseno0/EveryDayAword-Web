@@ -20,7 +20,7 @@
               </div>
             </div> </el-card
           ><br />
-          <div v-for="i in this.productinfos.word" :key="i">
+          <div v-for="i in this.productinfos" :key="i">
             <el-card
               ><i
                 class="el-icon-coffee-cup"
@@ -69,20 +69,30 @@ export default {
         }
       }, 10000);
       this.axios
-        .get("http://localhost:8887/getword") //need to change url
+        .get("/api/getword") //need to change url
         .then(resp => {
           if (resp.status === 200) {
-            this.productinfos = JSON.parse(resp.data);
+            // console.log(resp);
+            // console.log(resp.data);
+            this.productinfos = resp.data.word;
+            // console.log(this.productinfos);
+            setTimeout(() => {
+              loading.close();
+              this.isLoading = false;
+            }, 1000);
           } else {
             this.$message({
               showClose: true,
-              message: "哎呀 鸡汤在路上洒了 请重新熬一碗吧",
+              message: "哎呀 鸡汤在来的路上洒了 请重新熬一碗吧",
               type: "error"
             });
             loading.close();
             this.isLoading = false;
           }
         })
+        // fetch('http://abc.im0o.top:14771/getword')
+        //   .then( (res) => {  return res.json() } )//对fetch进行格式化，否则读取不到内容
+        //   .then( (data) => { this.productinfos = data; loading.close(); } )//拿到格式化后的数据data
         .catch(error => {
           console.log(error);
           this.$message({
@@ -96,7 +106,7 @@ export default {
     }
   },
   created() {
-    this.initWebpack();
+    this.loading();
   }
 };
 </script>
