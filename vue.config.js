@@ -1,7 +1,7 @@
 module.exports = {
   devServer: {
     proxy: {
-      "/api": {
+      "*/api": {
         target: "http://abc.im0o.top:14771",
         //   ws: true,
         changeOrigin: true,

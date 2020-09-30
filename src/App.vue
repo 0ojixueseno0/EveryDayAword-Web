@@ -29,7 +29,7 @@
       layout="prev, pager, next, jumper"
       :total="1000">
     </el-pagination> -->
-        <p style="display: inline">🚀Powered by</p>
+        <p style="display: inline">🚀Powered by </p>
         <el-link href="https://im0o.top/" type="primary" style="display: inline"
           >0ojixueseno0</el-link
         >
