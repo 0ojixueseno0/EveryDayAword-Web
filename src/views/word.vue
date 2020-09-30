@@ -76,10 +76,8 @@ export default {
             // console.log(resp.data);
             this.productinfos = resp.data.word;
             // console.log(this.productinfos);
-            setTimeout(() => {
-              loading.close();
-              this.isLoading = false;
-            }, 1000);
+            loading.close();
+            this.isLoading = false;
           } else {
             this.$message({
               showClose: true,
